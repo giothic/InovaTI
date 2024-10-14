@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/gradeCurricular.css">
+    <title>Página do AVA</title>
+</head>
+
+<header>
+    UNIVERSIDADE
+</header>
+
+<body>
+    <div class="dashboard-container">
+        <aside>
+            <a href="projeto.html"><h2>HOME</h2></a>
+            <nav>
+                <ul>
+                    <li><a href="info.html">Informações</a></li>
+                    <li><a href="gradeCurricular.html">Grade Curricular/Notas</a></li>
+                    <li><a href="#biblioteca">Biblioteca</a></li>
+                    <li><a href="#libras">Libras</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <div class="content-area">
+                <h1>Conteúdo</h1>
+                <div class="banner">
+                    <img src="./img/image.png" alt="Banner" />
+                </div>
+
+                <div class="container">
+                    <!-- Grade Curricular -->
+                    <div class="curriculum">
+                        <h2>Grade Curricular</h2>
+                        <ul>
+                            <li><strong>Disciplina 1:</strong> Algoritmos e Programação</li>
+                            <li><strong>Disciplina 2:</strong> Cálculo I</li>
+                            <li><strong>Disciplina 3:</strong> Física I</li>
+                            <li><strong>Disciplina 4:</strong> Álgebra Linear</li>
+                            <li><strong>Disciplina 5:</strong> Estruturas de Dados</li>
+                            <li><strong>Disciplina 6:</strong> Sistemas Operacionais</li>
+                        </ul>
+                    </div>
+
+                    <!-- Notas do Aluno -->
+                    <div class="grades">
+                        <h2>Calcular Notas</h2>
+                        <p>Insira as suas notas para cada disciplina:</p>
+                        <form id="gradeForm">
+                            <label for="nota1">Algoritmos:</label>
+                            <input type="number" id="nota1" step="0.1" min="0" max="10" required><br>
+                            <label for="nota2">Cálculo I:</label>
+                            <input type="number" id="nota2" step="0.1" min="0" max="10" required><br>
+                            <label for="nota3">Física I:</label>
+                            <input type="number" id="nota3" step="0.1" min="0" max="10" required><br>
+                            <label for="nota4">Álgebra Linear:</label>
+                            <input type="number" id="nota4" step="0.1" min="0" max="10" required><br>
+                            <label for="nota5">Estruturas de Dados:</label>
+                            <input type="number" id="nota5" step="0.1" min="0" max="10" required><br>
+                            <label for="nota6">Sistemas Operacionais:</label>
+                            <input type="number" id="nota6" step="0.1" min="0" max="10" required><br>
+                            <button type="button" onclick="calcularNotas()">Calcular Média</button>
+                            <button type="button" onclick="zerarNotas()">Zerar Notas</button>
+                        </form>
+
+                        <h2>Resultado</h2>
+                        <table id="resultTable">
+                            <thead>
+                                <tr>
+                                    <th>Disciplina</th>
+                                    <th>Média</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="resultBody">
+                                <!-- Resultados vão aparecer aqui -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="style/gradeCurricular.js"></script>
+</body>
+</html>
