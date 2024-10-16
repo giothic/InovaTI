@@ -7,8 +7,66 @@
     <link rel="stylesheet" href="./styles/main-res.css">
     <script src="https://kit.fontawesome.com/d35059178e.js" crossorigin="anonymous"></script>
     <title>Página do AVA</title>
+    <style>
+        /* Estilos do Gradiente e Bolhas */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, rgba(255, 100, 150, 0.8), rgba(100, 150, 255, 0.8));
+            background-size: 300% 300%; /* Tamanho maior para o movimento do gradiente */
+            animation: gradientAnimation 12s ease infinite; /* Animação do gradiente */
+            position: relative; /* Para que as bolhas sejam posicionadas corretamente */
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: bubbleAnimation 10s infinite; /* Animação das bolhas */
+        }
+
+        @keyframes bubbleAnimation {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0.6;
+            }
+            50% {
+                transform: translateY(-100px) scale(1.2);
+                opacity: 0.4;
+            }
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 0.6;
+            }
+        }
+
+        /* Ajustes para a Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 20px;
+            background-color: rgba(26, 49, 74, 0); /* Cor de fundo transparente */
+            color: #fff;
+            position: relative;
+            z-index: 10;
+        }
+    </style>
 </head>
 <body>
+    <!-- Bolhas -->
+    <div class="bubble" style="background: rgba(255, 255, 255, 0.5); width: 50px; height: 50px; top: 20%; left: 10%; animation-delay: 0s;"></div>
+    <div class="bubble" style="background: rgba(255, 255, 255, 0.3); width: 70px; height: 70px; top: 30%; left: 70%; animation-delay: 1s;"></div>
+    <div class="bubble" style="background: rgba(255, 255, 255, 0.4); width: 40px; height: 40px; top: 60%; left: 50%; animation-delay: 2s;"></div>
+    <div class="bubble" style="background: rgba(255, 255, 255, 0.6); width: 60px; height: 60px; top: 80%; left: 20%; animation-delay: 3s;"></div>
+
     <header class="navbar">
         <div class="menu">
               <button id="toggle-aside" class="toggle-button">☰</button>  
@@ -31,14 +89,14 @@
             <a href="#" class="icon">
                 <i class="fa-solid fa-bell"></i>
             </a>
-                            <a href="#" class="settings-icon">
-                    <i class="fa-solid fa-gear"></i>
-                </a>
-                <div class="user-menu">
-                    <span id="user-name" style="text-transform: uppercase; font-weight: bold; font-size: 17px;">
-                        NOME DO ALUNO
-                    </span>
-                </div>
+            <a href="#" class="settings-icon">
+                <i class="fa-solid fa-gear"></i>
+            </a>
+            <div class="user-menu">
+                <span id="user-name" style="text-transform: uppercase; font-weight: bold; font-size: 17px;">
+                    NOME DO ALUNO
+                </span>
+            </div>
         </div>
     </header>
 

@@ -5,17 +5,7 @@ body {
     background-color: #f4f4f4;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 20px;
-    background-color: #1a314a; /* Cor de fundo */
-    color: #fff; /* Cor do texto */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra mais visível */
-    position: relative; /* Adicionado para garantir que o z-index funcione */
-    z-index: 10; /* Garante que o elemento fique acima de outros */
-}
+
 
 .logo {
     width: 70px;
@@ -26,7 +16,7 @@ body {
 .navbar-left {
     display: flex;
     align-items: center;
-    margin-left: -375px; /* Ajuste este valor conforme necessário */
+    margin-left: -850px; /* Ajuste este valor conforme necessário */
 }
 
 .navbar-middle,
@@ -81,7 +71,7 @@ i {
 
 aside {
     width: 250px;
-    background: #4e4a6d; /* color2 */
+    background: #b1a7ff3f; /* color2 */
     color: white;
     text-align: center;
     transition: width 0.3s ease, opacity 0.3s ease;
@@ -162,7 +152,7 @@ aside nav ul li a:hover {
 
 .course-card {
     padding: 20px;
-    background-color: #fff;
+    background-color: #ffffff3d;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -322,7 +312,7 @@ aside nav ul li a:hover {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: #1a314a;
+    background-color: #00000000;
     color: white;
     border: none;
     font-size: 24px;
@@ -330,11 +320,12 @@ aside nav ul li a:hover {
     z-index: 10;
     margin: 20px;
     padding: 10px;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .toggle-button:hover {
-    background-color: #003366;
+    background-color: #00336600;
+    transform: scale(1.);
 }
 
 
