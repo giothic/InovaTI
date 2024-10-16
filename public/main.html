@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/main-res.css">
     <script src="https://kit.fontawesome.com/d35059178e.js" crossorigin="anonymous"></script>
     <title>Página do AVA</title>
 </head>
 <body>
     <header class="navbar">
-    <button id="toggle-aside" class="toggle-button">☰</button>
+        <div class="menu">
+              <button id="toggle-aside" class="toggle-button">☰</button>  
+        </div>
+
         <div class="navbar-left">
             <img src="img/inova_tecnologia_ltda_logo.jfif" alt="Home" class="logo" />
             <span class="ucb">
                 <h2 class="ajust">InovaTI - Instituto de Inovação em Tecnologia</h2>
             </span>
         </div>
+        
         <div class="navbar-right">
             <a href="#" class="icon">
                 <i class="fa-solid fa-envelope"></i>
@@ -26,12 +31,14 @@
             <a href="#" class="icon">
                 <i class="fa-solid fa-bell"></i>
             </a>
-            <div class="user-menu">
-                <span id="user-name">NOME DO ALUNO</span> <!-- Este texto será atualizado com o nome real do aluno -->
-                <a href="#" class="settings-icon">
+                            <a href="#" class="settings-icon">
                     <i class="fa-solid fa-gear"></i>
                 </a>
-            </div>
+                <div class="user-menu">
+                    <span id="user-name" style="text-transform: uppercase; font-weight: bold; font-size: 17px;">
+                        NOME DO ALUNO
+                    </span>
+                </div>
         </div>
     </header>
 
@@ -92,7 +99,7 @@
             </div>
         </main>
 
-        <footer class="rodape_projeto">
+        <footer class="rodape_projeto" id="footer" style="display: none;">
             <p>© 2024 InovaTI - Instituto de Inovação em Tecnologia - Todos os direitos reservados</p>
         </footer>
     </div>

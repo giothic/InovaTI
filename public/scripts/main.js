@@ -48,3 +48,16 @@ document.getElementById('toggle-aside').addEventListener('click', function() {
     const sidebar = document.getElementById('sidebar');
     sidebar.classList.toggle('closed');
   });
+
+  window.addEventListener('scroll', function() {
+    var footer = document.getElementById('footer');
+    var scrollPosition = window.scrollY + window.innerHeight;
+    var pageHeight = document.documentElement.scrollHeight;
+
+    // Checa se o usuário está no final da página (ou muito próximo)
+    if (scrollPosition >= pageHeight - 10) {
+        footer.style.display = 'block'; // Exibe o footer
+    } else {
+        footer.style.display = 'none'; // Oculta o footer quando não estiver no final
+    }
+});
