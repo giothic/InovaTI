@@ -1,233 +1,236 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./styles/main.css">
-        <link rel="stylesheet" href="./styles/main-res.css">
-        <script src="https://kit.fontawesome.com/d35059178e.js"
-            crossorigin="anonymous"></script>
-        <title>Página do AVA</title>
-        <style>
 
-.bubble {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4); /* Ajuste de cor e opacidade */
-    filter: blur(5px); /* Efeito de desfoque */
-    animation: bubbleAnimation 15s infinite; /* Animação das bolhas */
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/main-res.css">
+    <script src="https://kit.fontawesome.com/d35059178e.js" crossorigin="anonymous"></script>
+    <title>Página do AVA</title>
+    <style>
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            /* Ajuste de cor e opacidade */
+            filter: blur(5px);
+            /* Efeito de desfoque */
+            animation: bubbleAnimation 15s infinite;
+            /* Animação das bolhas */
+        }
 
-/* Tamanhos aleatórios para as bolhas */
-.bubble.small {
-    width: 20px;
-    height: 20px;
-}
+        /* Tamanhos aleatórios para as bolhas */
+        .bubble.small {
+            width: 20px;
+            height: 20px;
+        }
 
-.bubble.medium {
-    width: 30px;
-    height: 30px;
-}
+        .bubble.medium {
+            width: 30px;
+            height: 30px;
+        }
 
-.bubble.large {
-    width: 50px;
-    height: 50px;
-}
+        .bubble.large {
+            width: 50px;
+            height: 50px;
+        }
 
-/* Animação das bolhas */
-@keyframes bubbleAnimation {
-    0% {
-        transform: translateY(0) scale(1);
-        opacity: 0.6;
-    }
-    50% {
-        transform: translateY(-150px) scale(1.2); /* Movimento vertical e aumento de tamanho */
-        opacity: 0.3;
-    }
-    100% {
-        transform: translateY(0) scale(1);
-        opacity: 0.6;
-    }
-}
+        /* Animação das bolhas */
+        @keyframes bubbleAnimation {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0.6;
+            }
 
-/* Ajustes para a Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 20px;
-    background-color: rgba(26, 49, 74, 0); /* Cor de fundo transparente */
-    color: #fff;
-    position: relative;
-    z-index: 10;
-}
+            50% {
+                transform: translateY(-150px) scale(1.2);
+                /* Movimento vertical e aumento de tamanho */
+                opacity: 0.3;
+            }
 
-body {
-  background-color: #1a314a;
-  background-image:
-    radial-gradient(at 4% 0%, #1a314a 0px, transparent 20%),
-    radial-gradient(at 83% 72%, #4e4a6d 0px, transparent 20%),
-    radial-gradient(at 98% 32%, #8d6b9a 0px, transparent 20%),
-    radial-gradient(at 82% 68%, #dd91cd 0px, transparent 20%),
-    radial-gradient(at 44% 80%, #f8c0ed 0px, transparent 20%),
-    radial-gradient(at 56% 40%, #3e5679 0px, transparent 20%),
-    radial-gradient(at 30% 77%, #b987c3 0px, transparent 20%);
-  background-size: 200% 200%;
-  animation: moveGradients 60s ease-in-out infinite; /* Aumentei para 30s */
-}
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 0.6;
+            }
+        }
 
+        /* Ajustes para a Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 20px;
+            background-color: rgba(26, 49, 74, 0);
+            /* Cor de fundo transparente */
+            color: #fff;
+            position: relative;
+            z-index: 10;
+        }
 
-@keyframes moveGradients {
-  0% {
-    background-position: 0% 0%, 100% 100%, 50% 50%, 0% 100%, 100% 0%, 50% 100%, 100% 50%;
-  }
-  25% {
-    background-position: 50% 50%, 0% 0%, 75% 25%, 100% 50%, 25% 75%, 100% 100%, 0% 0%;
-  }
-  50% {
-    background-position: 100% 100%, 50% 0%, 100% 50%, 50% 50%, 0% 100%, 25% 0%, 50% 100%;
-  }
-  75% {
-    background-position: 0% 100%, 100% 50%, 50% 50%, 0% 0%, 75% 75%, 50% 0%, 100% 50%;
-  }
-  100% {
-    background-position: 0% 0%, 100% 100%, 50% 50%, 0% 100%, 100% 0%, 50% 100%, 100% 50%;
-  }
-}
+        body {
+            background-color: #1a314a;
+            background-image:
+                radial-gradient(at 4% 0%, #1a314a 0px, transparent 20%),
+                radial-gradient(at 83% 72%, #4e4a6d 0px, transparent 20%),
+                radial-gradient(at 98% 32%, #8d6b9a 0px, transparent 20%),
+                radial-gradient(at 82% 68%, #dd91cd 0px, transparent 20%),
+                radial-gradient(at 44% 80%, #f8c0ed 0px, transparent 20%),
+                radial-gradient(at 56% 40%, #3e5679 0px, transparent 20%),
+                radial-gradient(at 30% 77%, #b987c3 0px, transparent 20%);
+            background-size: 200% 200%;
+            animation: moveGradients 45s ease-in-out infinite;
+            /* Aumentei para 30s */
+        }
 
 
+        @keyframes moveGradients {
+            0% {
+                background-position: 0% 0%, 100% 100%, 50% 50%, 0% 100%, 100% 0%, 50% 100%, 100% 50%;
+            }
+
+            25% {
+                background-position: 50% 50%, 0% 0%, 75% 25%, 100% 50%, 25% 75%, 100% 100%, 0% 0%;
+            }
+
+            50% {
+                background-position: 100% 100%, 50% 0%, 100% 50%, 50% 50%, 0% 100%, 25% 0%, 50% 100%;
+            }
+
+            75% {
+                background-position: 0% 100%, 100% 50%, 50% 50%, 0% 0%, 75% 75%, 50% 0%, 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 0%, 100% 100%, 50% 50%, 0% 100%, 100% 0%, 50% 100%, 100% 50%;
+            }
+        }
     </style>
-    </head>
-    <body>
-        <!-- Bolhas -->
-        <div class="bubble"
-            style="background: rgba(255, 255, 255, 0.3); width: 30px; height: 30px; top: 20%; left: 10%; animation-delay: 0s; filter: blur(8px);"></div>
-        <div class="bubble"
-            style="background: rgba(255, 255, 255, 0.2); width: 40px; height: 40px; top: 30%; left: 70%; animation-delay: 1s; filter: blur(10px);"></div>
-        <div class="bubble"
-            style="background: rgba(255, 255, 255, 0.25); width: 25px; height: 25px; top: 60%; left: 50%; animation-delay: 2s; filter: blur(6px);"></div>
-        <div class="bubble"
-            style="background: rgba(255, 255, 255, 0.35); width: 35px; height: 35px; top: 80%; left: 20%; animation-delay: 3s; filter: blur(7px);"></div>
+</head>
 
-        <header class="navbar">
-            <div class="menu">
-                <button id="toggle-aside" class="toggle-button">☰</button>
-            </div>
+<body>
+    <!-- Bolhas -->
+    <div class="bubble"
+        style="background: rgba(255, 255, 255, 0.3); width: 30px; height: 30px; top: 20%; left: 10%; animation-delay: 0s; filter: blur(8px);">
+    </div>
+    <div class="bubble"
+        style="background: rgba(255, 255, 255, 0.2); width: 40px; height: 40px; top: 30%; left: 70%; animation-delay: 1s; filter: blur(10px);">
+    </div>
+    <div class="bubble"
+        style="background: rgba(255, 255, 255, 0.25); width: 25px; height: 25px; top: 60%; left: 50%; animation-delay: 2s; filter: blur(6px);">
+    </div>
+    <div class="bubble"
+        style="background: rgba(255, 255, 255, 0.35); width: 35px; height: 35px; top: 80%; left: 20%; animation-delay: 3s; filter: blur(7px);">
+    </div>
 
-            <div class="navbar-left">
-                <img src="img/inova_tecnologia_ltda_logo.jfif" alt="Home"
-                    class="logo" />
-                <span class="ucb">
-                    <h2 class="ajust">InovaTI - Instituto de Inovação em
-                        Tecnologia</h2>
-                </span>
-            </div>
-
-            <div class="navbar-right">
-                <a href="#" class="icon">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
-                <a href="#" class="icon">
-                    <i class="fa-solid fa-comments"></i>
-                </a>
-                <a href="#" class="icon">
-                    <i class="fa-solid fa-bell"></i>
-                </a>
-                <a href="#" class="settings-icon">
-                    <i class="fa-solid fa-gear"></i>
-                </a>
-                <div class="user-menu">
-                    <span id="user-name"
-                        style="text-transform: uppercase; font-weight: bold; font-size: 17px;">
-                        NOME DO ALUNO
-                    </span>
-                </div>
-            </div>
-        </header>
-
-        <div class="dashboard-container">
-            <aside id="sidebar" class="sidebar">
-                <nav>
-                    <ul>
-                        <li><a href="main.html"
-                                class="nav-link"><h2>Home</h2></a></li>
-                        <li><a href="info.html"
-                                class="nav-link"><h2>Info</h2></a></li>
-                        <li><a href="gradeCurricular.html"
-                                class="nav-link"><h2>Notas</h2></a></li>
-                        <li><a href="#biblioteca"
-                                class="nav-link"><h2>Biblioteca</h2></a></li>
-                        <li><a href="#libras"
-                                class="nav-link"><h2>Libras</h2></a></li>
-                    </ul>
-                </nav>
-            </aside>
-
-            <main class="main-content">
-                <div class="course-section">
-                    <div class="course-list">
-                        <div class="course-card">
-                            <img src="img/im.webp" class="img1">
-                            <a href="pagina.cnt.html"><h3
-                                    class="pga1">Nivelamento Estudo de Robótica
-                                    com Arduino 2024/2</h3></a>
-                        </div>
-                        <div class="course-card">
-                            <img src="img/im.webp" class="img1">
-                            <a href="pagina.cnt.html"><h3
-                                    class="pga1">Nivelamento Algoritmos e
-                                    Programação Estruturada Noturno
-                                    2024/2</h3></a>
-                        </div>
-                        <div class="course-card">
-                            <img src="img/im.webp" class="img1">
-                            <a href="pagina.cnt.html"><h3 class="pga1">Ciência
-                                    da Computação 2024/2</h3></a>
-                        </div>
-                        <div class="course-card">
-                            <img src="img/im.webp" class="img1">
-                            <a href="pagina.cnt.html"><h3 class="pga1">Sistemas
-                                    Computacionais - GPE02N0623 2024/2</h3></a>
-                        </div>
-                        <div class="course-card">
-                            <img src="img/im.webp" class="img1">
-                            <a href="pagina.cnt.html"><h3
-                                    class="pga1">Engenharia de Software -
-                                    GPE02N0622 2024/2</h3></a>
-                        </div>
-                        <div class="course-card">
-                            <img src="img/im.webp" class="img1">
-                            <a href="pagina.cnt.html"><h3
-                                    class="pga1">Algoritmos e Programação
-                                    Estruturada - GPE02N0621 2024/2</h3></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-section">
-                    <h3>Informações sobre TI</h3>
-                    <p>O campo da Tecnologia da Informação (TI) envolve o uso de
-                        computadores e software para gerenciar e processar
-                        dados. Profissionais de TI trabalham com redes,
-                        segurança, desenvolvimento de software e suporte
-                        técnico.</p>
-                    <p>Principais áreas de atuação:</p>
-                    <ul>
-                        <li>Desenvolvimento de Software</li>
-                        <li>Segurança da Informação</li>
-                        <li>Infraestrutura e Redes</li>
-                        <li>Suporte Técnico</li>
-                        <li>Inteligência Artificial e Machine Learning</li>
-                    </ul>
-                </div>
-            </main>
-
-            <footer class="rodape_projeto" id="footer" style="display: none;">
-                <p>© 2024 InovaTI - Instituto de Inovação em Tecnologia - Todos
-                    os direitos reservados</p>
-            </footer>
+    <header class="navbar">
+        <div class="menu">
+            <button id="toggle-aside" class="toggle-button">☰</button>
         </div>
 
-        <script type="module" src="./scripts/main.js"></script>
-    </body>
+        <div class="navbar-left">
+            <img src="./img/343 Sem Título_20241017110848.png" alt="Home" class="logo" />
+        </div>
+
+        <div class="navbar-right">
+            <a href="#" class="icon">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="#" class="icon">
+                <i class="fa-solid fa-comments"></i>
+            </a>
+            <a href="#" class="icon">
+                <i class="fa-solid fa-bell"></i>
+            </a>
+            <a href="#" class="settings-icon">
+                <i class="fa-solid fa-gear"></i>
+            </a>
+            <div class="user-menu">
+                <span id="user-name" style="text-transform: uppercase; font-weight: bold; font-size: 17px;">
+                    NOME DO ALUNO
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <aside id="sidebar" class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="main.html" class="nav-link">
+                            <h2>Home</h2>
+                        </a></li>
+                    <li><a href="info.html" class="nav-link">
+                            <h2>Info</h2>
+                        </a></li>
+                    <li><a href="gradeCurricular.html" class="nav-link">
+                            <h2>Notas</h2>
+                        </a></li>
+                    <li><a href="#biblioteca" class="nav-link">
+                            <h2>Biblioteca</h2>
+                        </a></li>
+                    <li><a href="#libras" class="nav-link">
+                            <h2>Libras</h2>
+                        </a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="course-section">
+                <div class="course-list">
+                    <div class="course-card">
+                        <img src="img/im.webp" class="img1">
+                        <a href="pagina.cnt.html">
+                            <h3 class="pga1">Nivelamento Estudo de Robótica
+                                com Arduino 2024/2</h3>
+                        </a>
+                    </div>
+                    <div class="course-card">
+                        <img src="img/im.webp" class="img1">
+                        <a href="pagina.cnt.html">
+                            <h3 class="pga1">Nivelamento Algoritmos e
+                                Programação Estruturada Noturno
+                                2024/2</h3>
+                        </a>
+                    </div>
+                    <div class="course-card">
+                        <img src="img/im.webp" class="img1">
+                        <a href="pagina.cnt.html">
+                            <h3 class="pga1">Ciência
+                                da Computação 2024/2</h3>
+                        </a>
+                    </div>
+                    <div class="course-card">
+                        <img src="img/im.webp" class="img1">
+                        <a href="pagina.cnt.html">
+                            <h3 class="pga1">Sistemas
+                                Computacionais - GPE02N0623 2024/2</h3>
+                        </a>
+                    </div>
+                    <div class="course-card">
+                        <img src="img/im.webp" class="img1">
+                        <a href="pagina.cnt.html">
+                            <h3 class="pga1">Engenharia de Software -
+                                GPE02N0622 2024/2</h3>
+                        </a>
+                    </div>
+                    <div class="course-card">
+                        <img src="img/im.webp" class="img1">
+                        <a href="pagina.cnt.html">
+                            <h3 class="pga1">Algoritmos e Programação
+                                Estruturada - GPE02N0621 2024/2</h3>
+                        </a>
+                    </div>
+                </div><br>
+            </div>
+    </div>
+    <footer class="rodape_projeto" id="footer" style="display: none;">
+        <p>© 2024 InovaTI - Instituto de Inovação em Tecnologia - Todos
+            os direitos reservados</p>
+    </footer>
+
+    <script type="module" src="./scripts/main.js"></script>
+</body>
+
 </html>

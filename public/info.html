@@ -9,9 +9,12 @@
 </head>
 
 <header class="navbar">
+    <div class="menu">
+          <button id="toggle-aside" class="toggle-button">☰</button>  
+    </div>
+
     <div class="navbar-left">
-        <img src="img/inova_tecnologia_ltda_logo.jfif" alt="Home" class="logo" />
-        <span class="ucb"><h2 class="ajust">InovaTI - Instituto de Inovação em Tecnologia</h2></span>
+        <img src="./img/343 Sem Título_20241017110848.png" alt="Home" class="logo" />
     </div>
     <div class="navbar-right">
         <a href="#" class="icon">
@@ -24,21 +27,19 @@
             <i class="fa-solid fa-bell"></i>
         </a>
 </header>
-
-<body>
-    <div class="dashboard-container">
-        <aside>
-            <a href="projeto.html"><h2>HOME</h2></a>
+<div class="dashboard-container">
+    <aside id="sidebar" class="sidebar">
             <nav>
-                <ul>
-                    <li><a href="pagina.infor.html">Informações</a></li>
-                    <li><a href="pagina.nt.grade.html">Grade Curricular/Notas</a></li>
-                    <li><a href="#biblioteca">Biblioteca</a></li>
-                    <li><a href="#libras">Libras</a></li>
-                </ul>
-            </nav>
-        </aside>
-        
+            <ul>
+                <li><a href="pag_materia.html" class="nav-link"><h2>Home</h2></a></li>
+                <li><a href="pag_infor.html" class="nav-link"><h2>Info</h2></a></li>
+                <li><a href="pag_nota.html" class="nav-link"><h2>Notas</h2></a></li>
+                <li><a href="pag_biblioteca.html" class="nav-link"><h2>Biblioteca</h2></a></li>
+                <li><a href="pag_libras.html" class="nav-link"><h2>Libras</h2></a></li>
+            </ul>
+        </nav>
+    </aside>
+<body>     
         <main class="pg2">
             <section class="instituicao">
                 <h2>Bem-vindo à InovaTI</h2>
@@ -97,13 +98,11 @@
                         <li><strong>Projetos Inovadores:</strong> Incentivo à criação de soluções reais.</li>
                     </ul>
                 </div>
-
-    
-        </main>
-        
-    </div>
-    <footer class="rodape_info">
+</div>
+</main>
+<script src="script/aside.js"></script>
+    <!-- <footer class="rodape_info">
         <p>© 2024 InovaTI - Instituto de Inovação em Tecnologia - Todos os direitos reservados</p>
-    </footer>
+    </footer> -->
 </body>
 </html>
