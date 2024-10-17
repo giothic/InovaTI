@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #13273b;
 }
 
 
@@ -16,7 +16,7 @@ body {
 .navbar-left {
     display: flex;
     align-items: center;
-    margin-left: -850px; /* Ajuste este valor conforme necessário */
+    margin-left: -375px; /* Ajuste este valor conforme necessário */
 }
 
 .navbar-middle,
@@ -95,6 +95,7 @@ aside nav {
     display: flex;
     flex-direction: column;
 }
+
 
 .nav-link {
     display: block;
@@ -179,7 +180,7 @@ aside nav ul li a:hover {
 }
 
 .course-card:hover {
-    background-color: #e0e0e0;
+    background-color: #e0e0e07a;
     transform: scale(1.05);
 }
 
@@ -340,4 +341,31 @@ aside nav ul li a:hover {
 .settings-icon {
     margin-right: 0; /* Remove o espaçamento à direita do último ícone, se necessário */
 }
+
+
+/* Estiliza a largura e o fundo da barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #1a314a; /* Cor de fundo da barra */
+}
+
+/* Estiliza o "track" (a trilha por onde o thumb rola) */
+::-webkit-scrollbar-track {
+    background-color: transparent; /* Cor da trilha */
+}
+
+/* Estiliza o "thumb" (a parte que você arrasta) */
+::-webkit-scrollbar-thumb {
+    background-color: #dd91cd; /* Cor do thumb */
+    border-radius: 6px; /* Deixa as bordas arredondadas */
+    border: 2px solid #1a314a; /* Adiciona uma borda ao redor do thumb */
+}
+
+/* Estiliza o thumb ao passar o mouse por cima */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #8d6b9a; /* Cor do thumb ao passar o mouse */
+}
+
+
+
 

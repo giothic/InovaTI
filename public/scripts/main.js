@@ -61,3 +61,4 @@ document.getElementById('toggle-aside').addEventListener('click', function() {
         footer.style.display = 'none'; // Oculta o footer quando não estiver no final
     }
 });
+
