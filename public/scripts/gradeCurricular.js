@@ -53,3 +53,47 @@ function zerarNotas() {
     const resultBody = document.getElementById('resultBody');
     resultBody.innerHTML = '';
 }
+
+// Seleciona os elementos
+const toggleButton = document.getElementById('toggle-aside');
+const sidebar = document.querySelector('.sidebar');
+const navbar = document.querySelector('.navbar');
+const mainContent = document.querySelector('.main-content');
+const rodapeProjeto = document.querySelector('.rodape_projeto');
+const body = document.body;  // Captura o body do documento
+
+// Adiciona o evento de clique ao botão
+toggleButton.addEventListener('click', function () {
+    // Alterna a classe 'active' no sidebar
+    sidebar.classList.toggle('active');
+    
+    // Move a navbar e o main para a direita quando o sidebar estiver ativo
+    navbar.classList.toggle('move-right');
+    mainContent.classList.toggle('move-right');
+    rodapeProjeto.classList.toggle('move-right');
+
+    // Verifica se o aside está ativo para bloquear/desbloquear o scroll
+    if (sidebar.classList.contains('active')) {
+        // Adiciona a classe no-scroll quando o sidebar está aberto
+        body.classList.add('no-scroll');
+        console.log('Scroll bloqueado'); // Verifica se o scroll foi bloqueado
+    } else {
+        // Remove a classe no-scroll quando o sidebar está fechado
+        body.classList.remove('no-scroll');
+        console.log('Scroll desbloqueado'); // Verifica se o scroll foi desbloqueado
+    }
+});
+
+
+  window.addEventListener('scroll', function() {
+    var footer = document.getElementById('footer');
+    var scrollPosition = window.scrollY + window.innerHeight;
+    var pageHeight = document.documentElement.scrollHeight;
+
+    // Checa se o usuário está no final da página (ou muito próximo)
+    if (scrollPosition >= pageHeight - 10) {
+        footer.style.display = 'block'; // Exibe o footer
+    } else {
+        footer.style.display = 'none'; // Oculta o footer quando não estiver no final
+    }
+});

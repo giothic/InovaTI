@@ -1,64 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/biblioteca.css">
-    <script src="https://kit.fontawesome.com/d35059178e.js" crossorigin="anonymous"></script>
-    <title>Biblioteca - Faculdade de TI</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/biblioteca.css">
+        <script src="https://kit.fontawesome.com/d35059178e.js"
+            crossorigin="anonymous"></script>
+        <title>Biblioteca - Faculdade de TI</title>
 
-</head>
-<header class="navbar">
-    <div class="menu">
-        <button id="toggle-aside" class="toggle-button">☰</button>  
-    </div>
-
-    <div class="navbar-left">
-        <img src="./img/343 Sem Título_20241017110848.png" alt="Home" class="logo" />
-    </div>
-    <div class="navbar-right">
-        <a href="#" class="icon">
-        <i class="fa-solid fa-envelope"></i>
-        </a>
-        <a href="#" class="icon">
-        <i class="fa-solid fa-comments"></i>
-        </a>
-        <a href="#" class="icon">
-        <i class="fa-solid fa-bell"></i>
-        </a>
-        </div>
-    </div>
-</header>
-
-<div class="dashboard-container">
-    <aside id="sidebar" class="sidebar">
-        <nav>
-            <ul>
-                <li><a href="main.html" class="nav-link"><h2>Home</h2></a></li>
-                <li><a href="info.html" class="nav-link"><h2>Info</h2></a></li>
-                <li><a href="gradeCurricular.html" class="nav-link"><h2>Notas</h2></a></li>
-                <li><a href="#" id="openModal" class="nav-link"><h2>Biblioteca</h2></a></li>
-                <li><a href="libras.html" class="nav-link"><h2>Libras</h2></a></li>
-            </ul>
-        </nav>
-    </aside>
+    </head>
 
     <body>
-
-         <!-- Barra de pesquisa na página -->
-         <div class="search-bar" id="searchBar">Buscar Livro na Biblioteca</div>
-
-        <div id="results"></div>
-
-        <!-- Modal -->
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Buscar Livro na Biblioteca</h2>
-                <input type="text" id="searchInputModal" placeholder="Buscar livros...">
-                <button id="searchButtonModal">Buscar</button>
+        <header class="navbar">
+            <div class="menu">
+                <button id="toggle-aside" class="toggle-button">☰</button>
             </div>
-        </div>
-    </body>
-    <script src="./scripts/biblioteca.js"></script>
-</html>
+
+            <div class="navbar-left">
+                <img src="./img/343 Sem Título_20241017110848.png" alt="Home"
+                    class="logo" />
+            </div>
+            <div class="navbar-right">
+                <a href="#" class="icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="#" class="icon">
+                    <i class="fa-solid fa-comments"></i>
+                </a>
+                <a href="#" class="icon">
+                    <i class="fa-solid fa-bell"></i>
+                </a>
+                <a href="#" class="settings-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </a>
+                <div class="user-menu">
+                    <span id="user-name"
+                        style="text-transform: uppercase; font-weight: bold; font-size: 17px;">
+                        NOME DO ALUNO
+                    </span>
+                </div>
+            </header>
+
+            <div class="dashboard-container">
+                <aside id="sidebar" class="sidebar">
+                    <nav>
+                        <ul>
+                            <li><a href="main.html"
+                                    class="nav-link"><h2>Home</h2></a></li>
+                            <li><a href="info.html"
+                                    class="nav-link"><h2>Info</h2></a></li>
+                            <li><a href="gradeCurricular.html"
+                                    class="nav-link"><h2>Notas</h2></a></li>
+                            <li><a href="#" id="openModal"
+                                    class="nav-link"><h2>Biblioteca</h2></a></li>
+                            <li><a href="libras.html"
+                                    class="nav-link"><h2>Libras</h2></a></li>
+                        </ul>
+                    </nav>
+                </aside>
+
+                <section class="corpo">
+                <div class="search-bar" id="searchBar">Buscar Livro na
+                    Biblioteca</div>
+
+                <div id="results"></div>
+
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Buscar Livro na Biblioteca</h2>
+                        <input type="text" id="searchInputModal"
+                            placeholder="Buscar livros...">
+                        <button id="searchButtonModal">Buscar</button>
+                    </div>
+                </div>
+            </section>
+            </body>
+            <script src="./scripts/biblioteca.js"></script>
+        </html>
