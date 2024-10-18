@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles/gradeCurricular.css">
+        <script src="https://kit.fontawesome.com/d35059178e.js" crossorigin="anonymous"></script>
         <title>Página do AVA</title>
     </head>
     <body>
@@ -11,12 +12,11 @@
             <div class="menu">
                 <button id="toggle-aside" class="toggle-button">☰</button>
             </div>
-
+        
             <div class="navbar-left">
-                <img src="./img/343 Sem Título_20241017110848.png" alt="Home"
-                    class="logo" />
+                <img src="./img/343 Sem Título_20241017110848.png" alt="Home" class="logo" />
             </div>
-
+        
             <div class="navbar-right">
                 <a href="#" class="icon">
                     <i class="fa-solid fa-envelope"></i>
@@ -31,37 +31,38 @@
                     <i class="fa-solid fa-gear"></i>
                 </a>
                 <div class="user-menu">
-                    <span id="user-name"
-                        style="text-transform: uppercase; font-weight: bold; font-size: 17px;">
+                    <span id="user-name" style="text-transform: uppercase; font-weight: bold; font-size: 17px;">
                         NOME DO ALUNO
                     </span>
                 </div>
             </div>
         </header>
-
+    
         <div class="dashboard-container">
             <aside id="sidebar" class="sidebar">
                 <nav>
                     <ul>
-                        <li><a href="main.html"
-                                class="nav-link"><h2>Home</h2></a></li>
-                        <li><a href="info.html"
-                                class="nav-link"><h2>Info</h2></a></li>
-                        <li><a href="gradeCurricular.html"
-                                class="nav-link"><h2>Notas</h2></a></li>
-                        <li><a href="#biblioteca"
-                                class="nav-link"><h2>Biblioteca</h2></a></li>
-                        <li><a href="pag_libras.html"
-                                class="nav-link"><h2>Libras</h2></a></li>
+                        <li><a href="main.html" class="nav-link">
+                                <h2>Home</h2>
+                            </a></li>
+                        <li><a href="info.html" class="nav-link">
+                                <h2>Info</h2>
+                            </a></li>
+                        <li><a href="gradeCurricular.html" class="nav-link">
+                                <h2>Notas</h2>
+                            </a></li>
+                        <li><a href="biblioteca.html" class="nav-link">
+                                <h2>Biblioteca</h2>
+                            </a></li>
+                        <li><a href="libras.html" class="nav-link">
+                                <h2>Libras</h2>
+                            </a></li>
                     </ul>
                 </nav>
             </aside>
 
             <main>
                 <div class="content-area">
-                    <div class="banner">
-                        <img src="./img/foto.jpg" alt="Banner" />
-                    </div>
 
                     <div class="container-grd">
                         <!-- Grade Curricular -->
@@ -158,5 +159,16 @@
         <!-- <footer class="rodape_nt">
         <p>© 2024 InovaTI - Instituto de Inovação em Tecnologia - Todos os direitos reservados</p>
     </footer> -->
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
     </body>
 </html>

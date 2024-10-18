@@ -22,17 +22,16 @@ body {
 }
 
 /* Navbar, conteúdo principal e rodapé */
-.navbar, .main-content, .rodape_projeto, .section.corpo {
+.navbar, .main-content, .rodape_projeto, .section.corpo, body {
     position: relative;
     transition: transform 0.5s ease-in-out; /* Abertura rápida */
 }
 
 .navbar.move-right,
-.main-content.move-right,
-.rodape_projeto.move-right,
- .section.corpo.move-right{
-    transform: translateX(250px); /* Move 250px para a direita */
-    transition: transform 0.5s ease-in-out; /* Fechamento mais suave e gradual */
+main.move-right,
+.rodape_projeto.move-right {
+    transform: translateX(250px); /* Mover 250px para a direita */
+    transition: transform 0.5s ease-in-out; /* Transição suave */
 }
 
 /* Bloquear scroll horizontal apenas */
@@ -49,6 +48,14 @@ body.no-scroll {
     align-self: center;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #13273b; /* Cor de fundo */
+}
+
 .navbar-left {
     display: flex;
     align-items: center;
@@ -56,7 +63,6 @@ body.no-scroll {
     margin-top: 18px;
 }
 
-.navbar-middle,
 .navbar-right {
     display: flex;
     align-items: center;
@@ -89,6 +95,7 @@ body.no-scroll {
     display: flex;
     align-items: center;
     margin-left: 20px;
+    color: white;
 }
 
 i {
@@ -98,6 +105,36 @@ i {
     cursor: pointer;
     font-size: 25px;
 }
+
+.navbar-middle,
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-item img {
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.navbar-right .icon {
+    cursor: pointer;
+    color: white;
+}
+
+.navbar-right .icon img {
+    height: 25px;
+}
+
 
 /* Estilo da Dashboard */
 .dashboard-container {
@@ -205,15 +242,15 @@ aside nav ul li a:hover {
 
 
 .icon i, .settings-icon i {
-    font-size: 16px; /* Tamanho dos ícones */
+    font-size: 16px; 
 }
 
 .icon, .settings-icon {
-    margin-right: 0px; /* Espaçamento entre os ícones */
+    margin-right: 0px; 
 }
 
 .settings-icon {
-    margin-right: 0; /* Remove o espaçamento à direita do último ícone, se necessário */
+    margin-right: 0; 
 }
 
 

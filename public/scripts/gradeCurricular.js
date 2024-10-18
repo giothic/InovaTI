@@ -54,35 +54,20 @@ function zerarNotas() {
     resultBody.innerHTML = '';
 }
 
-// Seleciona os elementos
 const toggleButton = document.getElementById('toggle-aside');
 const sidebar = document.querySelector('.sidebar');
 const navbar = document.querySelector('.navbar');
-const mainContent = document.querySelector('.main-content');
-const rodapeProjeto = document.querySelector('.rodape_projeto');
-const body = document.body;  // Captura o body do documento
+const main = document.querySelector('main'); // Captura o elemento main
 
-// Adiciona o evento de clique ao botão
 toggleButton.addEventListener('click', function () {
-    // Alterna a classe 'active' no sidebar
-    sidebar.classList.toggle('active');
-    
-    // Move a navbar e o main para a direita quando o sidebar estiver ativo
-    navbar.classList.toggle('move-right');
-    mainContent.classList.toggle('move-right');
-    rodapeProjeto.classList.toggle('move-right');
+    sidebar.classList.toggle('active'); // Alterna a classe 'active' no sidebar
+    navbar.classList.toggle('move-right'); // Move a navbar para a direita
+    main.classList.toggle('move-right'); // Move o conteúdo principal para a direita
 
-    // Verifica se o aside está ativo para bloquear/desbloquear o scroll
-    if (sidebar.classList.contains('active')) {
-        // Adiciona a classe no-scroll quando o sidebar está aberto
-        body.classList.add('no-scroll');
-        console.log('Scroll bloqueado'); // Verifica se o scroll foi bloqueado
-    } else {
-        // Remove a classe no-scroll quando o sidebar está fechado
-        body.classList.remove('no-scroll');
-        console.log('Scroll desbloqueado'); // Verifica se o scroll foi desbloqueado
-    }
-});
+    // Adiciona ou remove a classe no-scroll dependendo do estado do sidebar
+    document.body.classList.toggle('no-scroll', sidebar.classList.contains('active'));
+})
+
 
 
   window.addEventListener('scroll', function() {

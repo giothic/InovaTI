@@ -22,7 +22,7 @@ body {
 }
 
 /* Navbar, conteúdo principal e rodapé */
-.navbar, .main-content, .rodape_projeto, .section.corpo {
+.navbar, .main-content, .rodape_projeto, .corpo {
     position: relative;
     transition: transform 0.5s ease-in-out; /* Abertura rápida */
 }
@@ -30,7 +30,7 @@ body {
 .navbar.move-right,
 .main-content.move-right,
 .rodape_projeto.move-right,
- .section.corpo.move-right{
+.corpo.move-right { 
     transform: translateX(250px); /* Move 250px para a direita */
     transition: transform 0.5s ease-in-out; /* Fechamento mais suave e gradual */
 }
@@ -98,6 +98,7 @@ i {
     cursor: pointer;
     font-size: 25px;
 }
+
 
 /* Estilo da Dashboard */
 .dashboard-container {
@@ -360,3 +361,6 @@ h1 {
 ::-webkit-scrollbar-thumb:hover {
     background-color: #8d6b9a; /* Cor do thumb ao passar o mouse */
 }
+
+/* ---------- */
+
