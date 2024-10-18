@@ -59,7 +59,7 @@ body.no-scroll {
 .navbar-left {
     display: flex;
     align-items: center;
-    margin-left: -850px; /* Ajuste este valor conforme necessário */
+    margin-left: -1200px; /* Ajuste este valor conforme necessário */
     margin-top: 18px;
 }
 

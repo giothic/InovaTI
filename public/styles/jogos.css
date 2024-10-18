@@ -52,7 +52,7 @@ body.no-scroll {
 .navbar-left {
     display: flex;
     align-items: center;
-    margin-left: -850px; /* Ajuste este valor conforme necessário */
+    margin-left: -1200px; /* Ajuste este valor conforme necessário */
     margin-top: 18px;
 }
 
@@ -377,7 +377,7 @@ h1 {
 .card {
     width: 120px; /* Largura das cartas */
     height: 180px; /* Altura das cartas */
-    background-color: #007bff;
+    background-color: #4e4a6d;
     color: white;
     display: flex;
     align-items: center;
@@ -404,11 +404,11 @@ h1 {
 }
 
 .card:active {
-    background-color: #003c7c;
+    background-color: #3e3b5a;
 }
 
 .btnjogo {
-    background: linear-gradient(#003975, #0063cc);
+    background: linear-gradient(#8d6b9a, #4e4a6d);
     color: white; /* Cor do texto branco */
     padding: 15px 32px; /* Espaçamento interno (padding) no botão */
     font-size: 20px; /* Tamanho da fonte */

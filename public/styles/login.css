@@ -405,16 +405,16 @@ form.sign-in-form {
 
 /* Estilos para o modo noturno */
 body.dark-mode {
-    background-color: #1c1c1c;
+    background-color: #0f1d2b;
     color: #e0e0e0;
 }
 
 body.dark-mode .container {
-    background-color: #1c1c1c;
+    background-color: #0f1d2b;
 }
 
 body.dark-mode .input-field {
-    background-color: #333;
+    background-color: #1a314a;
     color: #e0e0e0;
 }
 
@@ -435,7 +435,7 @@ body.dark-mode .panel .content {
 }
 
 body.dark-mode .container:before {
-    background-color: #1c1c1c;
+    background-color: #8d6b9a;
 }
 
 .dark-mode-toggle {
