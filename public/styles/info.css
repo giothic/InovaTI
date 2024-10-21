@@ -1,407 +1,23 @@
-/* Estilo geral do corpo */
+/* header */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('./info-res.css');
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #13273b; /* Cor de fundo */
+    background-color: #fdf4db;
 }
 
-.sidebar {
-    width: 250px;
-    height: 100vh;
-    background-color: #b1a7ff3f;
-    position: fixed;
-    top: 0;
-    left: -250px; /* Fora da tela à esquerda */
-    transition: left 0.6s ease-in-out; /* Transição suave para abertura */
-}
-
-/* Quando o aside for visível */
-.sidebar.active {
-    left: 0; /* Mostra o aside */
-}
-
-/* Navbar, conteúdo principal e rodapé */
-.navbar, .main-content, .rodape_projeto, .corpo {
-    position: relative;
-    transition: transform 0.5s ease-in-out; /* Abertura rápida */
-}
-
-.navbar.move-right,
-.main-content.move-right,
-.rodape_projeto.move-right,
-.corpo.move-right { 
-    transform: translateX(250px); /* Move 250px para a direita */
-    transition: transform 0.5s ease-in-out; /* Fechamento mais suave e gradual */
-}
-
-/* Bloquear scroll horizontal apenas */
-body.no-scroll {
-    overflow-x: hidden;
-    height: 100%; /* Mantém a altura fixa para evitar rolagem */
-}
-
-
-.logo {
-    width: 150px;
-    height: auto;
-    margin: 10px;
-    align-self: center;
-}
-
-.navbar-left {
-    display: flex;
-    align-items: center;
-    margin-left: -1200px; /* Ajuste este valor conforme necessário */
-    margin-top: 18px;
-}
-
-.navbar-middle,
-.navbar-right {
-    display: flex;
-    align-items: center;
-}
-
-.nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 15px;
-    text-decoration: none;
-    color: #fff;
-}
-
-.nav-item img {
-    height: 30px;
-    margin-bottom: 5px;
-}
-
-.navbar-right .icon {
-    cursor: pointer;
-    color: white;
-}
-
-.navbar-right .icon img {
-    height: 25px;
-}
-
-.user-menu {
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-}
-
-i {
-    height: 20px;
-    margin-left: 20px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 25px;
-}
-
-
-/* Estilo da Dashboard */
-.dashboard-container {
-    display: flex;
-    min-height: 100vh;
-    width: 100%;
-}
-
-aside {
-    width: 250px;
-    background: #b1a7ff3f; /* color2 */
-    color: white;
-    text-align: center;
-    transition: width 0.3s ease, opacity 0.3s ease;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-aside.closed {
-    width: 0;
-    padding: 0;
-    opacity: 0;
-    overflow: hidden;
-}
-
-aside h2 {
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-}
-
-aside nav {
-    display: flex;
-    flex-direction: column;
-}
-
-.nav-link {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-}
-
-.nav-link:hover {
-    color: white;
-}
-
-aside nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-aside nav ul li {
-    margin: 20px 0;
-    transition: font-size 0.2s ease;
-}
-
-aside nav ul li a:hover {
-    text-decoration: none;
-    padding: 7px;
-    background: linear-gradient(#56517a74, #4e4a6d53);
-    font-size: 14px;
-}
-
-/* Conteúdo principal */
-.main-content {
-    flex: 1;
-    padding: 20px;
-    margin-left: 20px; /* Ajustado para melhor alinhamento */
-    color: #333;
-}
-
-.rodape_projeto {
-    text-align: center;
-    padding: 0px; /* Reduz o padding para deixar mais fino */
-    background-color: #4e4a6d;
-    color: white;
-    position: fixed;
-    width: 100%;
-    height: auto; /* Deixa a altura automática para ajustar ao conteúdo */
-    bottom: 0;
-    font-size: 12px; /* Ajusta o tamanho da fonte para ser mais compacto */
-    line-height: 1.5; /* Ajusta o espaçamento entre as linhas */
-    box-shadow: 0 -2px 5px rgba(51, 51, 51, 0.5); /* Sombra na parte superior */
-}
-
-/* Botão de toggle */
-.toggle-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #00000000;
-    color: white;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 10;
-    margin: 20px;
-    padding: 10px;
-    transition: transform 0.3s ease;
-}
-
-.toggle-button:hover {
-    background-color: #00336600;
-    transform: scale(1.);
-}
-
-
-.icon i, .settings-icon i {
-    font-size: 16px; /* Tamanho dos ícones */
-}
-
-.icon, .settings-icon {
-    margin-right: 0px; /* Espaçamento entre os ícones */
-}
-
-.settings-icon {
-    margin-right: 0; /* Remove o espaçamento à direita do último ícone, se necessário */
-}
-
-/* Estilo para os livros */
-.book {
-    border: 1px solid #4e4a6d; /* Mantém a borda */
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    display: inline-block;
-    width: 200px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo levemente transparente */
-}
-
-h1 {
-    text-align: center;
-    color: #1a314a; /* Cor do título */
-}
-
-/* Imagem dos livros */
-.book img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Resultados */
-#results {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-/* Estilos para a barra de pesquisa */
-.search-bar {
-    margin: 20px auto;
-    width: 300px;
-    padding: 10px;
-    border: 1px solid #4e4a6d;
-    border-radius: 5px;
-    text-align: center;
-    background-color: rgba(248, 192, 237, 0.8); /* Cor de fundo */
-}
-
-/* Estilos para o modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 400px;
-    text-align: center;
-}
-
-/* Botão de fechar */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #1a314a;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Inputs e botões do modal */
-.modal input[type="text"], .modal button {
-    padding: 10px;
-    margin: 10px 0;
-}
-
-.modal input[type="text"] {
-    width: 80%;
-    border: 1px solid #4e4a6d;
-    border-radius: 5px;
-}
-
-.modal button {
-    background-color: #8d6b9a; /* Cor do botão */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.modal button:hover {
-    background-color: #dd91cd; /* Cor ao passar o mouse */
-}
-
-/* Estilo da Dashboard */
-.dashboard-container {
-    display: flex;
-    min-height: 100vh;
-    width: 100%;
-}
-
-
-/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #1a314a;
+    padding: 0px 20px;
+    background-color: #f0ddaa;
     color: rgb(255, 255, 255);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Estiliza a largura e o fundo da barra de rolagem */
-::-webkit-scrollbar {
-    width: 12px;
-    background-color: #1a314a; /* Cor de fundo da barra */
-}
-
-/* Estiliza o "track" (a trilha por onde o thumb rola) */
-::-webkit-scrollbar-track {
-    background-color: transparent; /* Cor da trilha */
-}
-
-/* Estiliza o "thumb" (a parte que você arrasta) */
-::-webkit-scrollbar-thumb {
-    background-color: #dd91cd; /* Cor do thumb */
-    border-radius: 6px; /* Deixa as bordas arredondadas */
-    border: 2px solid #1a314a; /* Adiciona uma borda ao redor do thumb */
-}
-
-/* Estiliza o thumb ao passar o mouse por cima */
-::-webkit-scrollbar-thumb:hover {
-    background-color: #8d6b9a; /* Cor do thumb ao passar o mouse */
-}
-
-/* ---------- */
-
-
-
-/* Estilo geral do corpo */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1a314a; /* Cor de fundo */
-}
-
-.sidebar {
-    width: 250px;
-    height: 100vh;
-    background-color: #4e4a6d; /* Cor da sidebar */
-    position: fixed;
-    top: 0;
-    left: -250px; /* Fora da tela à esquerda */
-    transition: left 0.6s ease-in-out; /* Transição suave para abertura */
-}
-
-/* Quando o aside for visível */
-.sidebar.active {
-    left: 0; /* Mostra o aside */
-}
-
-/* Navbar, conteúdo principal e rodapé */
-.navbar, .main-content, .rodape_projeto, .section.corpo {
-    position: relative;
-    transition: transform 0.5s ease-in-out; /* Abertura rápida */
-}
-
-.navbar.move-right,
-.main-content.move-right,
-.rodape_projeto.move-right,
-.section.corpo.move-right {
-    transform: translateX(250px); /* Move 250px para a direita */
-    transition: transform 0.5s ease-in-out; /* Fechamento mais suave e gradual */
-}
+  }
 
 /* Bloquear scroll horizontal apenas */
 body.no-scroll {
@@ -419,8 +35,11 @@ body.no-scroll {
 .navbar-left {
     display: flex;
     align-items: center;
-    margin-left: -1200px; /* Ajuste este valor conforme necessário */
-    margin-top: 18px;
+    margin-right: 59%;
+
+}
+.navbar{
+    color: #f0ddaa;
 }
 
 .navbar-middle,
@@ -435,7 +54,7 @@ body.no-scroll {
     align-items: center;
     margin: 0 15px;
     text-decoration: none;
-    color: #f8c0ed; /* Cor do texto do item do menu */
+    color: #fff;
 }
 
 .nav-item img {
@@ -444,38 +63,40 @@ body.no-scroll {
 }
 
 .navbar-right .icon {
+    margin-left: 20px;
     cursor: pointer;
-    color: #f8c0ed; /* Cor dos ícones */
-}
-
-.navbar-right .icon img {
-    height: 25px;
+    color: #e32d40;
+    text-decoration: none;
 }
 
 .user-menu {
     display: flex;
     align-items: center;
     margin-left: 20px;
+    color: #152b3c;
 }
 
-i {
-    height: 20px;
-    margin-left: 20px;
-    color: #f8c0ed; /* Cor dos ícones */
-    cursor: pointer;
-    font-size: 25px;
+
+/* Sidebar padrão (inicialmente escondida) */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #e47c5d;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Fora da tela à esquerda */
+    transition: left 0.6s ease-in-out; /* Transição suave para abertura */
 }
 
-/* Estilo da Dashboard */
-.dashboard-container {
-    display: flex;
-    min-height: 100vh;
-    width: 100%;
+/* Quando o aside for visível */
+.sidebar.active {
+    left: 0; /* Mostra o aside */
 }
+
 
 aside {
     width: 250px;
-    background: #4e4a6d; /* Cor da sidebar */
+    background: #e47c5d; /* color2 */
     color: white;
     text-align: center;
     transition: width 0.3s ease, opacity 0.3s ease;
@@ -491,7 +112,7 @@ aside.closed {
 
 aside h2 {
     text-align: center;
-    color: #f8c0ed; /* Cor do título na sidebar */
+    color: white;
     text-decoration: none;
 }
 
@@ -502,12 +123,12 @@ aside nav {
 
 .nav-link {
     display: block;
-    color: #f8c0ed; /* Cor do link da navegação */
+    color: #fff;
     text-decoration: none;
 }
 
 .nav-link:hover {
-    color: #dd91cd; /* Cor do link ao passar o mouse */
+    color: white;
 }
 
 aside nav ul {
@@ -523,39 +144,31 @@ aside nav ul li {
 aside nav ul li a:hover {
     text-decoration: none;
     padding: 7px;
-    background: linear-gradient(#8d6b9a, #dd91cd);
+    background: linear-gradient(#e66d49, #e47c5d);
     font-size: 14px;
 }
 
-/* Conteúdo principal */
-.main-content {
-    flex: 1;
-    padding: 20px;
-    margin-left: 20px; /* Ajustado para melhor alinhamento */
-    color: #333;
-}
-
-.rodape_projeto {
-    text-align: center;
-    padding: 0px; /* Red uz o padding para deixar mais fino */
-    background-color: #4e4a6d;
-    color: white;
-    position: fixed;
-    width: 100%;
-    height: auto; /* Deixa a altura automática para ajustar ao conteúdo */
-    bottom: 0;
-    font-size: 12px; /* Ajusta o tamanho da fonte para ser mais compacto */
-    line-height: 1.5; /* Ajusta o espaçamento entre as linhas */
-    box-shadow: 0 -2px 5px rgba(51, 51, 51, 0.5); /* Sombra na parte superior */
-}
+.navbar, .main-content, .rodape_projeto, .sample-header-section, .sample-section-wrap, .collage {
+    position: relative;
+    transition: transform 0.5s ease-in-out; /* Abertura rápida */
+  }
+  
+  .navbar.move-right,
+  .main-content.move-right,
+  .sample-header.move-right,
+   .sample-header-section.move-right,
+   .sample-section-wrap.move-right,
+   .collage.move-right{
+    transform: translateX(250px); /* Move 250px para a direita */
+    transition: transform 0.8s ease-in-out; /* Fechamento mais suave e gradual */
+  }
 
 /* Botão de toggle */
 .toggle-button {
-    position: absolute;
     top: 10px;
     left: 10px;
     background-color: #00000000;
-    color: #f8c0ed; /* Cor do texto do botão de toggle */
+    color: white;
     border: none;
     font-size: 24px;
     cursor: pointer;
@@ -570,9 +183,14 @@ aside nav ul li a:hover {
     transform: scale(1.);
 }
 
+#toggle-dark-mode {
+    background: transparent; /* Fundo transparente */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Mãozinha no hover */
+}
+
 .icon i, .settings-icon i {
-    font-size: 16px; /* Tamanho dos ícones */
-    color: #f8c0ed; /* Cor dos ícones */
+    font-size: 18px; /* Tamanho dos ícones */
 }
 
 .icon, .settings-icon {
@@ -585,272 +203,429 @@ aside nav ul li a:hover {
 
 /* ------------- */
 
-    /* Pagina 02 INFORMAÇÕES */
-    .pg2 { /* MAIN PG2 */
-        padding: 30px 20px;
-        max-width: 1200px; /* Largura máxima */
-        margin: 0 auto; /* Centraliza o conteúdo */
-        width: 70%; /* O conteúdo ocupará 80% da largura disponível */
-        box-sizing: border-box; /* Inclui padding e border no total */
-    }
-    h2 {
-        text-align: center;
-        padding: 5px;
-        color: #dd91cd; /* Cor do título */
-    }
-    
-    /* Seção de Missão, Visão, Valores e História */
-    .instituicao-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        background-color: #8d6b9a; /* Cor de fundo da seção */
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 40px;
-    }
-    
-    .instituicao-section h3 {
-        font-size: 22px;
-        color: #f8c0ed; /* Cor do título */
-        margin-bottom: 10px;
-    }
-    
-    .instituicao-section p {
-        font-size: 16px;
-        color: #333;
-        margin-bottom: 20px;
-        text-align: justify;
-    }
-    
-    .instituicao img {
-        width: 100%;
-        max-width: 600vh;
-        border-radius: 10px;
-        margin: 20px 0;
-    }
-    
-    /* Estilização da Visão, Valores e História */
-    .visao, .valores, .historia {
-        background-color: #ffffff;
-        border: 1px solid #4e4a6d;
-        border-radius: 8px;
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    
-    .visao h3, .valores h3, .historia h3 {
-        font-size: 20px;
-        color: #f8c0ed; /* Cor do título */
-        margin-bottom: 15px;
-    }
-    
-    .visao p, .valores p, .historia p {
-        font-size: 16px;
-        color: #333;
-    }
-    
-    /* Grid 5x5 para Cursos Oferecidos */
-    .cursos-section {
-        margin-top: 50px;
-    }
-    
-    .cursos-grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 20px;
-    }
-    
-    .curso-box {
-        padding: 20px;
-        background-color: #ffffff;
-        border : 1px solid #4e4a6d;
-        border-radius: 10px;
-        text-align: center;
-        transition: transform 0.3s ease;
-    }
-    
-    .curso-box:hover {
-        transform: scale(1.1);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    
-    .curso-box h4 {
-        font-size: 18px;
-        color: #f8c0ed; /* Cor do título */
-        margin-bottom: 10px;
-    }
-    
-    .curso-box p {
-        font-size: 14px;
-        color: #333;
-    }
-    
-    /* Seção de Diferenciais */
-    .diferenciais-section {
-        background-color: #f4f4f4;
-        padding: 40px 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        margin-top: 50px;
-    }
-    
-    .diferenciais-section h3 {
-        font-size: 24px;
-        color: #f8c0ed; /* Cor do título */
-        text-align: center;
-        margin-bottom: 30px;
-    }
-    
-    .diferenciais-list {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .diferenciais-list li {
-        background-color: #ffffff;
-        border: 1px solid #4e4a6d;
-        padding: 15px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-    
-    .diferenciais-list li:hover {
-        background-color: #8d6b9a;
-    }
-    
-    .diferenciais-list li p {
-        font-size: 16px;
-        color: #333;
-    }
-    /* Media queries para telas menores */
-    /* Responsividade para a seção de Missão, Visão, Valores e História */
-    @media (max-width: 768px) {
-        .pg2 {
-            padding: 20px 15px;
-            width: 100%;
-        }
-    
-        h2 {
-            font-size: 24px;
-        }
-    
-        .instituicao-section {
-            padding: 15px;
-            margin-bottom: 30px;
-        }
-    
-        .instituicao-section h3 {
-            font-size: 20px;
-        }
-    
-        .instituicao-section p {
-            font-size: 14px;
-        }
-    
-        .instituicao img {
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-        }
-    
-        .visao, .valores, .historia {
-            padding: 15px;
-        }
-    
-        .visao h3, .valores h3, .historia h3 {
-            font-size: 18px;
-        }
-    
-        .visao p, .valores p, .historia p {
-            font-size: 14px;
-        }
-    
-        /* Responsividade para a seção de Cursos Oferecidos */
-        .cursos-section {
-            margin-top: 40px;
-        }
-    
-        .cursos-grid {
-            grid-template-columns: repeat(2, 1fr); /* Altera para 2 colunas */
-            gap: 15px;
-        }
-    
-        .curso-box {
-            padding: 15px;
-        }
-    
-        .curso-box h4 {
-            font-size: 16px;
-        }
-    
-        /* Responsividade para a seção de Diferenciais */
-        .diferenciais-section {
-            padding: 30px 15px;
-            margin-top: 40px;
-        }
-    
-        .diferenciais-section h3 {
-            font-size: 22px;
-        }
-    
-        .diferenciais-list li {
-            padding: 10px;
-        }
-    
-        .diferenciais-list li p {
-            font-size: 14px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .pg2 {
-            padding: 10px;
-            width: 100%;
-        }
-    
-        h2 {
-            font-size: 22px;
-        }
-    
-        .instituicao-section h3 {
-            font-size: 16px;
-        }
-    
-        .instituicao-section p {
-            font-size: 12px;
-        }
-    
-        .instituicao img {
-            width: 100%;
-            height: auto;
-        }
-    
-        .cursos-grid {
-            grid-template-columns: 1fr; /* Alterado para 1 coluna */
-        }
-    
-        .curso-box h4 {
-            font-size: 12px;
-        }
-    
-        .diferenciais-section {
-            padding: 15px;
-        }
-    
-        .diferenciais-section h3 {
-            font-size: 18px;
-        }
-    
-        .diferenciais-list li {
-            padding: 10px;
-        }
-    
-        .diferenciais-list li p {
-            font-size: 12px;
-        }
-    }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,800&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  overflow-y: scroll; /* Força a barra de rolagem */
+}
+
+.sample-header {
+  position: relative;
+  width: 100%;
+  background-image: url('../img/InovaTi1.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; /* A altura da seção parallax ocupa toda a tela */
+  overflow: hidden; /* Previne overflow no cabeçalho */
+}
+
+.sample-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: MidnightBlue;
+  opacity: 0.3;
+  z-index: 1; /* Certifique-se de que o overlay fique acima da imagem de fundo */
+}
+
+.sample-header-section {
+  position: relative;
+  padding: 20% 0;
+  max-width: 640px;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  z-index: 2; /* Certifique-se de que o texto fique acima do overlay */
+}
+
+h2{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0.2rem;
+    line-height: 70px;
+}
+
+
+
+.sample-header-section h2 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: 1rem;
+}
+
+.sample-section-wrap {
+  min-height: 100vh; /* Garante que haja espaço suficiente para o conteúdo abaixo da imagem de fundo */
+  margin-top: 20vh; /* Mantém o conteúdo após a imagem de fundo */
+  background-color: #fdf4db;
+  margin-bottom: 20vh;
+}
+
+.sample-section {
+  max-width: 1140px;
+  margin: auto;
+  padding: 40px 20px; /* Adicionado padding para espaçamento */
+}
+
+section {
+  max-width: 800px; /* Limita a largura máxima das seções */
+  margin: 0 auto; /* Centraliza as seções na tela */
+  padding: 20px; /* Adiciona um pouco de espaço interno */
+  margin-bottom: 8%;
+}
+
+h3 {
+  margin-top: 40px; /* Aumenta a margem superior entre as seções */
+  margin-bottom: 10px; /* Mantém uma margem inferior para os títulos */
+
+}
+
+.cursos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Cria colunas responsivas */
+  gap: 10px; /* Espaçamento entre os itens da grade */
+}
+
+.curso-box {
+  background-color: #f8e9be; /* Cor de fundo para os boxes dos cursos */
+  padding: 15px;
+  border-radius: 8px; /* Bordas arredondadas */
+  text-align: center; /* Centraliza o texto dentro do box */
+}
+
+.diferenciais-section {
+  margin-top: 40px; /* Aumenta a margem superior da seção de diferenciais */
+  color: #152b3c;
+}
+
+.diferenciais-list {
+  list-style-type: none; /* Remove as bolinhas da lista */
+  padding: 0; /* Remove o padding da lista */
+  color: #152b3c;
+}
+
+.diferenciais-list li {
+  margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+  color: #152b3c;
+}
+
+.titulos {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.titulos h3 {
+  margin: 0;
+  font-size: 1.2em; /* Tamanho de fonte aumentado */
+  color: #152b3c;
+}
+
+.conteudo {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens quebrem para uma nova linha se necessário */
+  gap: 20px; /* Espaçamento entre os blocos de conteúdo */
+}
+
+.conteudo > * {
+  flex: 1 1 30%; /* Distribui os itens igualmente em três colunas */
+  margin-bottom: 20px; /* Espaçamento inferior entre os blocos de conteúdo */
+  padding: 20px; /* Adiciona padding para aumentar o espaço interno */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: adiciona uma sombra leve para destaque */
+  background-color: #f8e9be; /* Opcional: define uma cor de fundo */
+}
+.conteudo p, .conteudo ul{
+  text-align: justify; /* Texto justificado */
+  font-size: 1em; /* Tamanho de fonte padrão */
+  line-height: 1.5; /* Altura da linha para legibilidade */
+  list-style-type: none;
+  color: #152b3c;
+}
+
+.conteudo p{
+  margin: 10px;
+}
+
+.conteudo li {
+  font-weight: bold;
+  margin: 0;
+}
+
+
+/* -------------- */
+
+
+/* corpo */
+
+
+
+/* Bloquear scroll horizontal apenas */
+body.no-scroll {
+  overflow-x: hidden;
+  height: 100%; /* Mantém a altura fixa para evitar rolagem */
+}
+
+/* Conteúdo principal */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 20px; /* Ajustado para melhor alinhamento */
+  color: #333;
+}
+
+
+/* rodape */
+
+
+
+
+/* barra de rolagem */
+
+/* Estiliza a largura e o fundo da barra de rolagem */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent; /* Cor de fundo da barra */
+}
+
+/* Estiliza o "track" (a trilha por onde o thumb rola) */
+::-webkit-scrollbar-track {
+    background-color: transparent; /* Cor da trilha */
+}
+
+/* Estiliza o "thumb" (a parte que você arrasta) */
+::-webkit-scrollbar-thumb {
+    background-color: #e32d40; /* Cor do thumb */
+    border-radius: 6px; /* Deixa as bordas arredondadas */
+    border: 2px solid #1a314a00; /* Adiciona uma borda ao redor do thumb */
+}
+
+/* Estiliza o thumb ao passar o mouse por cima */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a51c2a; /* Cor do thumb ao passar o mouse */
+}
+
+
+
+/* ----------- */
+
+@import "https://unpkg.com/open-props/open-props.min.css";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+
+:where(h1, h2) {
+	margin: 0;
+  font-family: 'Impact', sans-serif;
+  text-transform: uppercase;
+}
+
+
+
+
+
+:where(header, footer) {
+	padding: var(--size-12) var(--size-6);
+	display: grid;
+	place-items: center;
+}
+
+
+.photo-block {
+  position: sticky;
+  top: calc(50% - 30vh);
+  height: 40vh;
+	width: 100%;
+	display: grid;
+  overflow: hidden;
+  background: var(--gray-6);
+}
+
+.photo-grid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(38deg);
+  display: grid;
+	grid-template-columns: repeat(7, 1fr);
+}
+
+.photo {
+  aspect-ratio: 3 / 4;
+  width: 20vmax;
+}
+
+.collage {
+  height: 200vh;
+  view-timeline: --collage;
+  margin-bottom: 20vh;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo:nth-of-type(7n + 1):nth-of-type(even),
+.photo:nth-of-type(7n + 3):nth-of-type(even),
+.photo:nth-of-type(7n + 5):nth-of-type(even),
+.photo:nth-of-type(7n + 7):nth-of-type(even) {
+  --vertical: -100%;
+  --horizontal: 100%;
+}
+.photo:nth-of-type(7n + 1):nth-of-type(odd),
+.photo:nth-of-type(7n + 3):nth-of-type(odd),
+.photo:nth-of-type(7n + 5):nth-of-type(odd),
+.photo:nth-of-type(7n + 7):nth-of-type(odd) {
+  --vertical: -100%;
+  --horizontal: -100%;
+}
+
+.photo:nth-of-type(7n + 2):nth-of-type(even),
+.photo:nth-of-type(7n + 4):nth-of-type(even),
+.photo:nth-of-type(7n + 6):nth-of-type(even) {
+  --vertical: 100%;
+  --horizontal: -100%;
+}
+
+.photo:nth-of-type(7n + 2):nth-of-type(odd),
+.photo:nth-of-type(7n + 4):nth-of-type(odd),
+.photo:nth-of-type(7n + 6):nth-of-type(odd) {
+  --vertical: 100%;
+  --horizontal: 100%;
+}
+
+.photo {
+  animation-name: travel;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-timeline: --collage;
+  animation-range: entry 100% exit 0%;
+}
+
+@keyframes travel {
+  0% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 var(--vertical);
+  }
+  100% {
+    translate: var(--horizontal) var(--vertical);
+  }
+}
+
+/* Debugging ViewTimeline Indicator */
+.indicators {
+	/* Can't pass the timeline-name via custom property */
+  position: fixed;
+  width: 16vw;
+  left: 8vw;
+  display: grid;
+  opacity: 0;
+  top: 50%;
+  gap: 2rem;
+  transform: translate(0, -50%);
+  justify-items: center;
+}
+
+.indicators:hover {
+  opacity: 0;
+}
+
+.progress {
+  height: 2.5rem;
+  width: 100%;
+  background: var(--gray-8);
+  position: relative;
+  border-radius: var(--radius-3);
+  overflow: hidden;
+}
+
+.progress__bar {
+  background: var(--indigo-6);
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+}
+
+.progress:nth-of-type(even) .progress__bar {
+  background: var(--orange-6);
+}
+
+.progress__label {
+  position: absolute;
+  inset: 0;
+  text-align: center;
+  font-weight: bold;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  color: var(--gray-0);
+}
+
+.progress--enter .progress__bar {
+  animation: indicate both linear;
+  animation-timeline: --collage;
+  animation-delay: enter 0%; /* Atraso no início da animação */
+}
+
+.progress--exit .progress__bar {
+  animation: indicate both linear;
+  animation-timeline: --collage;
+  animation-delay: exit 0%; /* Atraso no início da animação */
+}
+
+.progress--cover .progress__bar {
+  animation: indicate both linear;
+  animation-timeline: --collage;
+  animation-delay: cover 0%; /* Atraso no início da animação */
+}
+
+.progress--contain .progress__bar {
+  animation: indicate both linear;
+  animation-timeline: --collage;
+  animation-delay: contain 0%; /* Atraso no início da animação */
+}
+
+@keyframes indicate {
+  to {
+    transform: scaleX(1);
+  }
+}
+/* End debugging timelines */
+
+/* ------------ */
+
+/* rodape */
+
+.rodape_projeto {
+    text-align: center;
+    padding: 0px; /* Reduz o padding para deixar mais fino */
+    background-color: #e32d40;
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: auto; /* Deixa a altura automática para ajustar ao conteúdo */
+    bottom: 0;
+    font-size: 12px; /* Ajusta o tamanho da fonte para ser mais compacto */
+    line-height: 1.5; /* Ajusta o espaçamento entre as linhas */
+    box-shadow: 0 -2px 5px rgba(51, 51, 51, 0.5); /* Sombra na parte superior */
+}

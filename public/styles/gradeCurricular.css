@@ -59,8 +59,8 @@ body.no-scroll {
 .navbar-left {
     display: flex;
     align-items: center;
-    margin-left: -1200px; /* Ajuste este valor conforme necessário */
-    margin-top: 18px;
+    margin-right: 59%;
+
 }
 
 .navbar-right {
@@ -104,6 +104,12 @@ i {
     color: #fff;
     cursor: pointer;
     font-size: 25px;
+}
+
+#toggle-dark-mode {
+    background: transparent; /* Fundo transparente */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Mãozinha no hover */
 }
 
 .navbar-middle,

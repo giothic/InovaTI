@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles/gradeCurricular.css">
         <script src="https://kit.fontawesome.com/d35059178e.js" crossorigin="anonymous"></script>
-        <title>Página do AVA</title>
+        <title>InovaTI</title>
     </head>
     <body>
         <header class="navbar">
@@ -14,7 +14,7 @@
             </div>
         
             <div class="navbar-left">
-                <img src="./img/343 Sem Título_20241017110848.png" alt="Home" class="logo" />
+                <img id="logo" src="./img/logo-claro.png" alt="Home" class="logo" />
             </div>
         
             <div class="navbar-right">
@@ -30,6 +30,9 @@
                 <a href="#" class="settings-icon">
                     <i class="fa-solid fa-gear"></i>
                 </a>
+                <button id="toggle-dark-mode" class="icon">
+                    <i class="ri-moon-line"></i>
+                </button>
                 <div class="user-menu">
                     <span id="user-name" style="text-transform: uppercase; font-weight: bold; font-size: 17px;">
                         NOME DO ALUNO
@@ -155,10 +158,8 @@
                 </div>
             </div>
         </main>
-        <script src="./scripts/gradeCurricular.js"></script>
-        <!-- <footer class="rodape_nt">
-        <p>© 2024 InovaTI - Instituto de Inovação em Tecnologia - Todos os direitos reservados</p>
-    </footer> -->
+        <script type="module" src="./scripts/gradeCurricular.js"></script>
+
 
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
@@ -171,4 +172,7 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
       </script>
     </body>
+            <footer class="rodape_nt">
+        <p>© 2024 InovaTI - Instituto de Inovação em Tecnologia - Todos os direitos reservados</p>
+    </footer>
 </html>

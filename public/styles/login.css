@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('./info-res.css');
 * {
     margin: 0;
     padding: 0;
@@ -134,7 +135,7 @@ form.sign-in-form {
 
 .btn {
     width: 150px;
-    background-color: #8d6b9a;
+    background-color: #e32d40;
     border: none;
     outline: none;
     height: 49px;
@@ -148,7 +149,7 @@ form.sign-in-form {
 }
 
 .btn:hover {
-    background-color: #4e4a6d;
+    background-color: #a51c2a;
 }
 
 .panels-container {
@@ -169,7 +170,7 @@ form.sign-in-form {
     top: -10%;
     right: 48%;
     transform: translateY(-50%);
-    background-image: linear-gradient(-45deg, #1a314a 0%, #4e4a6d 100%);
+    background-image: linear-gradient(-45deg, #e32d40 0%, #e47c5d 100%);
     transition: 1.8s ease-in-out;
     border-radius: 50%;
     z-index: 6;
@@ -444,7 +445,7 @@ body.dark-mode .container:before {
     right: 20px;
     z-index: 1000;
     padding: 10px 20px;
-    background-color: #8d6b9a;
+    background-color: #e32d40;
     color: #fff;
     border: none;
     cursor: pointer;

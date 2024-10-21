@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/main-res.css">
-    <script src="https://kit.fontawesome.com/d35059178e.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <title>Página do AVA</title>
     <style>
         .bubble {
@@ -69,19 +69,18 @@
         }
 
         body {
-            background-color: #1a314a;
-            background-image:
-                radial-gradient(at 4% 0%, #1a314a 0px, transparent 20%),
-                radial-gradient(at 83% 72%, #4e4a6d 0px, transparent 20%),
-                radial-gradient(at 98% 32%, #8d6b9a 0px, transparent 20%),
-                radial-gradient(at 82% 68%, #dd91cd 0px, transparent 20%),
-                radial-gradient(at 44% 80%, #f8c0ed 0px, transparent 20%),
-                radial-gradient(at 56% 40%, #3e5679 0px, transparent 20%),
-                radial-gradient(at 30% 77%, #b987c3 0px, transparent 20%);
-            background-size: 200% 200%;
-            animation: moveGradients 45s ease-in-out infinite;
-            /* Aumentei para 30s */
-        }
+    background-color: #f0ddaa; /* Cor de fundo */
+    background-image:
+        radial-gradient(at 4% 0%, #e47c5d 0px, transparent 20%), /* Cor #e47c5d */
+        radial-gradient(at 83% 72%, #e32d40 0px, transparent 20%), /* Cor #e32d40 */
+        radial-gradient(at 98% 32%, #59b390 0px, transparent 20%), /* Cor #59b390 */
+        radial-gradient(at 82% 68%, #e47c5d 0px, transparent 20%), /* Cor #e47c5d */
+        radial-gradient(at 44% 80%, #e32d40 0px, transparent 20%), /* Cor #e32d40 */
+        radial-gradient(at 56% 40%, #59b390 0px, transparent 20%), /* Cor #59b390 */
+        radial-gradient(at 30% 77%, #e32d40 0px, transparent 20%); /* Cor #e32d40 */
+    background-size: 200% 200%;
+    animation: moveGradients 45s ease-in-out infinite; /* A animação permanece com duração de 45s */
+}
 
 
         @keyframes moveGradients {
@@ -129,22 +128,25 @@
         </div>
 
         <div class="navbar-left">
-            <img src="./img/343 Sem Título_20241017110848.png" alt="Home" class="logo" />
+            <img id="logo" src="./img/logo-claro.png" alt="Home" class="logo" />
         </div>
 
         <div class="navbar-right">
             <a href="#" class="icon">
-                <i class="fa-solid fa-envelope"></i>
+                <i class="ri-mail-line"></i>
             </a>
             <a href="#" class="icon">
-                <i class="fa-solid fa-comments"></i>
+                <i class="ri-chat-1-line"></i>
             </a>
             <a href="#" class="icon">
-                <i class="fa-solid fa-bell"></i>
+                <i class="ri-notification-3-line"></i>
             </a>
-            <a href="#" class="settings-icon">
-                <i class="fa-solid fa-gear"></i>
+            <a href="#" class="icon">
+                <i class="ri-settings-2-line"></i>
             </a>
+            <button id="toggle-dark-mode" class="icon">
+                <i class="ri-moon-line"></i>
+            </button>
             <div class="user-menu">
                 <span id="user-name" style="text-transform: uppercase; font-weight: bold; font-size: 17px;">
                     NOME DO ALUNO
@@ -158,19 +160,19 @@
             <nav>
                 <ul>
                     <li><a href="main.html" class="nav-link">
-                            <h2>Home</h2>
+                            <h2>HOME</h2>
                         </a></li>
                     <li><a href="info.html" class="nav-link">
-                            <h2>Info</h2>
+                            <h2>INFO</h2>
                         </a></li>
                     <li><a href="gradeCurricular.html" class="nav-link">
-                            <h2>Notas</h2>
+                            <h2>NOTAS</h2>
                         </a></li>
                     <li><a href="biblioteca.html" class="nav-link">
-                            <h2>Biblioteca</h2>
+                            <h2>BIBLIOTECA</h2>
                         </a></li>
                     <li><a href="libras.html" class="nav-link">
-                            <h2>Libras</h2>
+                            <h2>LIBRAS</h2>
                         </a></li>
                 </ul>
             </nav>
@@ -189,8 +191,8 @@
                     <div class="course-card">
                         <img src="img/im.webp" class="img1">
                         <a href="pagina.cnt.html">
-                            <h3 class="pga1">Nivelamento Algoritmos e
-                                Programação Estruturada Noturno
+                            <h3 class="pga1">Algoritmos e
+                                Programação Estruturada
                                 2024/2</h3>
                         </a>
                     </div>
@@ -205,21 +207,20 @@
                         <img src="img/im.webp" class="img1">
                         <a href="pagina.cnt.html">
                             <h3 class="pga1">Sistemas
-                                Computacionais - GPE02N0623 2024/2</h3>
+                                Computacionais - 2024/2</h3>
                         </a>
                     </div>
                     <div class="course-card">
                         <img src="img/im.webp" class="img1">
                         <a href="pagina.cnt.html">
                             <h3 class="pga1">Engenharia de Software -
-                                GPE02N0622 2024/2</h3>
+                                2024/2</h3>
                         </a>
                     </div>
                     <div class="course-card">
                         <img src="img/im.webp" class="img1">
                         <a href="pagina.cnt.html">
-                            <h3 class="pga1">Algoritmos e Programação
-                                Estruturada - GPE02N0621 2024/2</h3>
+                            <h3 class="pga1">CÁLCULO DIFERENCIAL E INTEGRAL - 2024/2</h3>
                         </a>
                     </div>
                 </div><br>

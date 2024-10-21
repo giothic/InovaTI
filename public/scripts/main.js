@@ -88,3 +88,42 @@ toggleButton.addEventListener('click', function () {
     }
 });
 
+const toggleDarkModeBtn = document.getElementById('toggle-dark-mode');
+const logo = document.getElementById('logo');
+
+// Função para aplicar o modo noturno
+function applyDarkMode(isDark) {
+    document.body.classList.toggle('dark-mode', isDark);
+    if (isDark) {
+        logo.src = "./img/logo-dark.png"; // Logo para o modo escuro
+    } else {
+        logo.src = "./img/logo-claro.png"; // Logo para o modo claro
+    }
+}
+
+// Verifica se o modo noturno está ativado no localStorage
+const isDarkMode = localStorage.getItem('dark-mode') === 'true';
+applyDarkMode(isDarkMode);
+
+// Altera o modo ao clicar no botão
+toggleDarkModeBtn.addEventListener('click', function() {
+    const isCurrentlyDark = document.body.classList.toggle('dark-mode');
+    // Alterar ícone entre lua e sol
+    const icon = toggleDarkModeBtn.querySelector('i');
+    if (isCurrentlyDark) {
+        icon.classList.remove('ri-moon-line');
+        icon.classList.add('ri-sun-line');
+    } else {
+        icon.classList.remove('ri-sun-line');
+        icon.classList.add('ri-moon-line');
+    }
+
+    // Salva a preferência no localStorage
+    localStorage.setItem('dark-mode', isCurrentlyDark);
+
+    // Atualiza a logo
+    logo.src = isCurrentlyDark ? "./img/logo-dark.png" : "./img/logo-claro.png";
+});
+
+
+
