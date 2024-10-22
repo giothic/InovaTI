@@ -65,7 +65,7 @@ body {
 .navbar-left {
   display: flex;
   align-items: center;
-  margin-right: 59%;
+  margin-right: 55%;
 
 }
 
@@ -350,6 +350,7 @@ h5 {
   letter-spacing: 0.1rem;
   transition: all 0.5s ease;
   font-size: 0.8rem;
+
 }
 
 .et-hero-tab:hover {

@@ -95,11 +95,15 @@ body.dark-mode {
 }
 
 .dark-mode a {
-    color: #bb86fc; /* Cor dos links */
+    color: #f0ddaa; /* Cor dos links */
+}
+
+.dark-mode .et-hero-tab {
+    background-color: #10212e;
 }
 
 .dark-mode a:hover {
-    color: #3700b3; /* Cor dos links ao passar o mouse */
+    color: #081620; /* Cor dos links ao passar o mouse */
 }
 
 .dark-mode .course-card {
@@ -183,16 +187,24 @@ body.dark-mode {
     background-color: #10212e;
 }
 
-.dark-mode .et-slide, .et-hero-tabs, .et-hero-tabs-container {
+.dark-mode .et-slide, .dark-mode .et-hero-tabs{
     background-color: #152b3c;
     color: #fff;
     background: #152b3c;
 }
 
 .dark-mode .et-hero-tabs h1,
-.et-slide h1, .et-hero-tabs h3,
-.et-slide h3, h5 {
+.dark-mode .et-slide h1, .dark-mode .et-hero-tabs h3,
+.dark-mode .et-slide h3, .dark-mode h5 {
     color: #fff;
 }
 
+.dark-mode .et-hero-tabs{
+    background: #152b3c;
+    background-color: #152b3c;
+}
+
+.dark-mode .et-hero-tabs-container{
+    background-color: #081620;
+}
 
